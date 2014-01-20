@@ -60,6 +60,8 @@ $(MOD_IMAGE_TGZ): $(IMAGE_BUILD_TGT) customize_occupyhere  $(MOD_IMAGE) $(MOD_VE
 	sudo patch -t -i $(PATCH_FOLDER)/lighttpd.1.patch $(IMAGE_BUILD_TGT)/conf/lighttpd/lighttpd.conf
 	sudo patch -t -i $(PATCH_FOLDER)/lighttpd.2.patch $(IMAGE_BUILD_TGT)/conf/lighttpd/lighttpd.conf
 	sudo patch -t -i $(PATCH_FOLDER)/piratebox.conf.1.patch $(IMAGE_BUILD_TGT)/conf/piratebox.conf 
+	sudo patch -t -i $(PATCH_FOLDER)/piratebox.conf.2.patch $(IMAGE_BUILD_TGT)/conf/piratebox.conf 
+	sudo patch -t -i $(PATCH_FOLDER)/init.d_piratebox_alt.1.patch $(IMAGE_BUILD_TGT)/init.d/piratebox_alt
 	##
 	sudo umount  $(IMAGE_BUILD_TGT)
 	tar czf  $(MOD_IMAGE_TGZ)  $(MOD_IMAGE)

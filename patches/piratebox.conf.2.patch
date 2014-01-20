@@ -1,0 +1,11 @@
+--- piratebox.conf.original	2014-01-20 22:46:03.000000000 +0100
++++ piratebox.conf	2014-01-20 22:46:28.000000000 +0100
+@@ -139,7 +139,7 @@
+ GEN_CHATFILE="$WWW_FOLDER/chat_content.html"
+ 
+ # Reset Shoutbox on Startup?
+-RESET_CHAT="yes"
++RESET_CHAT="no"
+ 
+ #Inititiation Chat-Message
+ CHATMSG="<div class='message'><date>00:00:00</date> <name>PirateBox:</name> <data class='def'>Chat and share files anonymously!</data></div>" 

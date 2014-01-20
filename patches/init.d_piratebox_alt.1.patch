@@ -1,0 +1,15 @@
+--- piratebox_alt.original	2014-01-20 22:43:36.000000000 +0100
++++ piratebox_alt	2014-01-20 22:44:14.000000000 +0100
+@@ -74,8 +74,10 @@
+ 
+     echo "Empty tmp folder"
+     find   $PIRATEBOX/tmp/  -exec rm {} \;
+-    echo "Copy over design files"
+-    $PIRATEBOX/bin/distribute_files.sh $SHARE_FOLDER/Shared
++
++#### disalbed for occupy.here
++#    echo "Copy over design files"
++#    $PIRATEBOX/bin/distribute_files.sh $SHARE_FOLDER/Shared
+ 
+ 
+ 

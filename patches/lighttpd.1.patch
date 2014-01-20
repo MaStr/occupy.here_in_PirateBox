@@ -1,8 +1,3 @@
-12c12,13
-< server.document-root        = "/opt/piratebox/www"
----
-> # is in occupy.conf 
-> ##server.document-root        = "/opt/piratebox/www"
 91c92
 < server.error-handler-404 = "/redirect.html"
 ---

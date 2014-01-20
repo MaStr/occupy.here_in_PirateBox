@@ -38,7 +38,7 @@ fi
 echo "Exchanging www folder..."
 mv    $WWW_FOLDER $PIRATEBOX_FOLDER/www_old
 mkdir -p  $WWW_FOLDER
-mv -v   $PIRATEBOX_FOLDER/www_old/library  $WWW_FOLDER 
+mv  $PIRATEBOX_FOLDER/www_old/library  $WWW_FOLDER 
 
 
 ## Switch hostname and recreate redirect.html file
