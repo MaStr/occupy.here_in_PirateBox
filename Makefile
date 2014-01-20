@@ -26,10 +26,13 @@ clean:
 	- rm -v $(MOD_VERSION_TAG)
 	- rm -vr $(OCCUPY_TGT_FOLDER) 
 	- rm $(MOD_IMAGE_TGZ)
+	- rm $(MOD_IMAGE)
 
 cleanall: clean
 	- rm -rv $(SRC_OCCUPY)
 	- rm -v $(SRC_DL_FILE)
+	- rm -v piratebox_ws_1.0_img.gz
+	- rm -rv $(IMAGE_BUILD_TGT) 
 
 $(PIRATEBOX_IMG_GZ):
 	wget -c $(PIRATEBOX_IMG_URL) -o $@
@@ -49,6 +52,7 @@ $(MOD_IMAGE_TGZ): $(IMAGE_BUILD_TGT) customize_occupyhere  $(MOD_IMAGE) $(MOD_VE
 	sudo   cp -vr $(CUSTOMIZATION_FOLDER)/*   $(IMAGE_BUILD_TGT)
 	sudo patch -t -i $(PATCH_FOLDER)/lighttpd.1.patch $(IMAGE_BUILD_TGT)/conf/lighttpd/lighttpd.conf
 	sudo patch -t -i $(PATCH_FOLDER)/lighttpd.2.patch $(IMAGE_BUILD_TGT)/conf/lighttpd/lighttpd.conf
+	sudo patch -t -i $(PATCH_FOLDER)/piratebox.conf.1.patch $(IMAGE_BUILD_TGT)/conf/piratebox.conf 
 	##
 	sudo umount  $(IMAGE_BUILD_TGT)
 	tar czf  $(MOD_IMAGE_TGZ)  $(MOD_IMAGE)

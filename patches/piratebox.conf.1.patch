@@ -1,0 +1,11 @@
+--- piratebox.conf.original	2014-01-20 18:34:44.000000000 +0100
++++ piratebox.conf	2014-01-20 18:35:29.000000000 +0100
+@@ -119,7 +119,7 @@
+ TIMESAVE="$PIRATEBOX_FOLDER/share/timesave_file"
+ 
+ #Start droopy? - Enable upload?
+-DROOPY_ENABLED="yes"
++DROOPY_ENABLED="no"
+ #Image-SRC
+ IMAGENAME="piratebox-logo-small.png"
+ IMAGE="$PIRATEBOX_FOLDER/src/$IMAGENAME"
