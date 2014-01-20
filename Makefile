@@ -3,9 +3,9 @@ VERSION = r7
 BUILD_VERSION=1.0.0
 
 SRC_OCCUPY=./src_occupy.here
-SRC_DL_FILE=ffff
-SRC_URL=rrrrr
-SRC_MD5SUM=rrrrrrr
+SRC_DL_FILE=src_occupy.here.zip
+SRC_URL=https://github.com/occupyhere/occupy.here/archive/$(VERSION).zip
+#SRC_MD5SUM=rrrrrrr
 
 PIRATEBOX_IMG_URL="http://piratebox.aod-rpg.de/piratebox_ws_1.0_img.gz"
 PIRATEBOX_IMG_GZ=piratebox_ws_1.0_img.gz
@@ -35,7 +35,14 @@ cleanall: clean
 	- rm -rv $(IMAGE_BUILD_TGT) 
 
 $(PIRATEBOX_IMG_GZ):
-	wget -c $(PIRATEBOX_IMG_URL) -o $@
+	wget -c $(PIRATEBOX_IMG_URL) -O $@
+
+$(SRC_DL_FILE):
+	wget -c $(SRC_URL) -O $@
+
+$(SRC_OCCUPY): $(SRC_DL_FILE)
+	unzip $(SRC_DL_FILE)
+	mv occupy.here-$(VERSION) $@
 
 
 $(IMAGE_BUILD_TGT):
