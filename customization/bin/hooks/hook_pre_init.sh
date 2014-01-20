@@ -25,8 +25,8 @@ Name-Real: occupy.here
 Name-Comment: $MAC_ADDRESS 
 Name-Email: $MAC_ADDRESS@occupyhere.org
 Expire-Date: 0
-%pubring /usb/occupy.here/data/gpg.pub
-%secring /usb/occupy.here/data/gpg.sec
+%pubring $SHARE_FOLDER/data/gpg.pub
+%secring $SHARE_FOLDER/data/gpg.sec
 %commit
 EOF
         gpg --batch --gen-key $SHARE_FOLDER/data/gpg.conf
@@ -42,7 +42,7 @@ mv -v   $PIRATEBOX_FOLDER/www_old/library  $WWW_FOLDER
 
 
 ## Switch hostname and recreate redirect.html file
-$PIRATEBOX_FOLDER/bin/install_piratebox.sh  $PIRATEBOX_CONF hostname occupy.here
+$PIRATEBOX_FOLDER/bin/install_piratebox.sh  $PIRATEBOX_CONF hostname occupy_here.lan
 
 #Catch all redirect to switch to correct hostname
 ln    $WWW_FOLDER/redirect.html $WWW_FOLDER/index.html
