@@ -1,6 +1,6 @@
 NAME = occupy.here
 VERSION = r7
-BUILD_VERSION=1.0.0
+BUILD_VERSION=1.0.1
 
 SRC_OCCUPY=./src_occupy.here
 SRC_DL_FILE=src_occupy.here.zip
