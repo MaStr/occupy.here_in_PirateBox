@@ -1,0 +1,13 @@
+12c12,13
+< server.document-root        = "/opt/piratebox/www"
+---
+> # is in occupy.conf 
+> ##server.document-root        = "/opt/piratebox/www"
+91c92
+< server.error-handler-404 = "/redirect.html"
+---
+> ### Hostname specific server.error-handler-404 = "/redirect.html"
+95a97,99
+> 
+> include "/opt/piratebox/conf/lighttpd/occupy.conf"
+> include "/opt/piratebox/conf/lighttpd/fastcgi.conf"
