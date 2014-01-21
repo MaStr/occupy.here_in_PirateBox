@@ -1,11 +1,11 @@
---- config.php.org	2014-01-21 22:20:06.441104365 +0100
-+++ config.php	2014-01-21 22:20:13.701065035 +0100
+--- config.php.org	2014-01-21 22:37:52.175330787 +0100
++++ config.php	2014-01-21 22:37:59.081960038 +0100
 @@ -1,7 +1,7 @@
  <?php
-      
+ 
  // URL
 -define('HOSTNAME', 'occupy.here');
 +define('HOSTNAME', 'occupy.here.lan');
- define('USE_SSL', 0);             
-                      
+ define('USE_SSL', 0);
+ 
  // Your current timezone
