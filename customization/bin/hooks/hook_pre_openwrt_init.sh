@@ -25,3 +25,13 @@ sed 's|;date.timezone =|date.timezone = UTC|' -i  $ext_linktarget/etc/php.ini
 pb_setSSID "$pb_wireless_ssid  $MAC_ADDRESS"
 uci commit
 
+#Patching path names on the live system to not 
+#   run into obosolete pathes
+sqlite3_bin=$(find  /usr -follow  -name sqlite3 | grep bin)
+zip_bin=$(find  /usr -follow  -name zip | grep bin)
+unzip_bin=$(find  /usr -follow  -name unzip | grep bin)
+
+sed "s,'/usr/bin/sqlite3','$sqlite3_bin',g" -i $PIRATEBOX_FOLDER/occupy.here/config.php
+sed "s,'/usr/bin/zip','$zip_bin',g" -i  $PIRATEBOX_FOLDER/occupy.here/config.php
+sed "s,'/usr/bin/unzip','$unzip_bin',g" -i $PIRATEBOX_FOLDER/occupy.here/config.php
+
