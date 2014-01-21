@@ -29,7 +29,9 @@ Expire-Date: 0
 %secring $SHARE_FOLDER/data/gpg.sec
 %commit
 EOF
-        gpg --batch --gen-key $SHARE_FOLDER/data/gpg.conf
+#####  Not working...
+#####        gpg --batch --gen-key $SHARE_FOLDER/data/gpg.conf
+   echo "skipping gpg config because of issues in random number generation"
 else
   echo "Skipping gpg config, because it already exists"
 fi
