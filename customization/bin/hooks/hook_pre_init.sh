@@ -9,7 +9,7 @@ PIRATEBOX_CONF=$1
 
 mkdir -p $SHARE_FOLDER/data
 mkdir -p $SHARE_FOLDER/Shared/tmp
-ln -s $PIRATEBOX_FOLDER/Shared $PIRATEBOX_FOLDER/occupy.here/public/uploads 
+ln -s $SHARE_FOLDER/Shared $PIRATEBOX_FOLDER/occupy.here/public/uploads 
 
 
 MAC_ADDRESS=$(/sbin/ifconfig | grep 'eth0' | tr -s ' ' | cut -d ' ' -f5 | sed "s/://g")
