@@ -87,6 +87,7 @@ customize_occupyhere: $(OCCUPY_TGT_FOLDER)
 	# This folder will be exchanged with a link to usb stick
 	- rm -r $(OCCUPY_TGT_FOLDER)/public/uploads
 	patch -t -i $(PATCH_FOLDER)/config.php.1.patch  $(OCCUPY_TGT_FOLDER)/config.php
+	patch -t -i $(PATCH_FOLDER)/config.php.2.patch  $(OCCUPY_TGT_FOLDER)/config.php
 
 shortimage: $(MOD_IMAGE_TGZ)
 

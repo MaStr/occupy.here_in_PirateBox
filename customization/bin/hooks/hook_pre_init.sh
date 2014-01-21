@@ -44,7 +44,7 @@ chown $LIGHTTPD_USER:$LIGHTTPD_GROUP  $PIRATEBOX_FOLDER/occupy.here -R
 
 
 ## Switch hostname and recreate redirect.html file
-$PIRATEBOX_FOLDER/bin/install_piratebox.sh  $PIRATEBOX_CONF hostname occupy_here.lan
+$PIRATEBOX_FOLDER/bin/install_piratebox.sh  $PIRATEBOX_CONF hostname occupy.here.lan
 
 #Catch all redirect to switch to correct hostname
 ln    $WWW_FOLDER/redirect.html $WWW_FOLDER/index.html
