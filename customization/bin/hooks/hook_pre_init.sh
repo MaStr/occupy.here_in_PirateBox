@@ -40,6 +40,8 @@ mv    $WWW_FOLDER $PIRATEBOX_FOLDER/www_old
 mkdir -p  $WWW_FOLDER
 mv  $PIRATEBOX_FOLDER/www_old/library  $WWW_FOLDER 
 
+chown $LIGHTTPD_USER:$LIGHTTPD_GROUP  $PIRATEBOX_FOLDER/occupy.here -R
+
 
 ## Switch hostname and recreate redirect.html file
 $PIRATEBOX_FOLDER/bin/install_piratebox.sh  $PIRATEBOX_CONF hostname occupy_here.lan
