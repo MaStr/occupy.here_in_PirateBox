@@ -19,7 +19,12 @@ MAC_ADDRESS=$(/sbin/ifconfig | grep 'eth0' | tr -s ' ' | cut -d ' ' -f5 | sed "s
 
 
 echo "${initscript}: Fixing timezone in php config..."
-sed 's|;date.timezone =|date.timezone = UTC|' -i  $ext_linktarget/etc/php.ini
+sed 's|;date.timezone =|date.timezone = UTC|' -i  /etc/php.ini
+
+sed 's|post_max_size = 8M|post_max_size = 20M|g' -i  /etc/php.ini
+sed "s|upload_tmp_dir = \"/tmp\"| upload_tmp_dir = \"$PIRATEBOX_FOLDER/share/tmp\" |g" -i /etc/php.ini
+sed 's|upload_max_filesize = 2M|upload_max_filesize = 20M|g' -i /etc/php.ini
+
 
 
 pb_setSSID "$pb_wireless_ssid  $MAC_ADDRESS"
